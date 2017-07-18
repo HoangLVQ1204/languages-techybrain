@@ -61,7 +61,10 @@ var config = {
     plugins: [
         new webpack.DefinePlugin({'process.env': env}),
         new ExtractTextPlugin({filename: '[name].css', disable: false, allChunks: false}),
-        new HtmlWebPackPlugin()
+        new HtmlWebPackPlugin({
+            // hash    : true,
+            template: ROOT_DIR + '/template/index.ejs'
+        })
     ],
     
 }
