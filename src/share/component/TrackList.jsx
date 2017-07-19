@@ -1,19 +1,34 @@
 import React, {Component, PropTypes} from 'react';
 
 export default class TrackList extends Component {
-  static propTypes = {
-    tracks: PropTypes.array
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      tracks: []
+    }  
   }
 
-  static defaultProps = {
-    tracks: []
+  componentWillMount() {
+     this.setState({
+       tracks: [
+          {
+            id: 1,
+            title: 'Em của ngày hôm qua'
+          },
+          {
+            id: 2,
+            title: 'Cơn mưa ngang qua'
+          }
+       ]
+     })
   }
 
   render() {
     return (
       <div>
       {
-        this.props.tracks.map((track) => {
+        this.state.tracks.map((track) => {
           return <div>Track: {track.title}</div>;
         })
       }
