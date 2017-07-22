@@ -11,9 +11,6 @@ import routes         from '../share/routes.jsx';
 import history        from '../share/history.jsx';
 import i18n           from '../share/i18n';
 
-import TrackList from '../share/component/TrackList.jsx';
-import App       from '../share/containers/App.jsx';
-
 const DEFAULT_LOCALE = 'en';
 
 const initialState = window.__INITIAL_STATE__ || {};

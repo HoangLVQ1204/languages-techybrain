@@ -1,5 +1,5 @@
 import App from './containers/App.jsx';
-import TrackList from '../share/component/TrackList.jsx';
+import TrackList from '../share/components/TrackList.jsx';
 
 const routes = [
     {
