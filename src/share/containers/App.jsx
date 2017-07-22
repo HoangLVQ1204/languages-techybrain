@@ -1,12 +1,15 @@
 import React, { Component, PropTypes } from 'react';
+import { renderRoutes } from 'react-router-config';
 
-export default class App extends Component {
+class App extends Component {
     render() {
         return (
             <div id='app-view'>
                 <h1>This is App 1</h1>
-                {this.props.children}
+                {renderRoutes(this.props.route.routes)}
             </div>
         );
     }
 }
+
+export default App;
