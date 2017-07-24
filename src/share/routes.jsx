@@ -1,5 +1,5 @@
 import App from './containers/App.jsx';
-import TrackList from '../share/components/TrackList.jsx';
+import Home from '../share/components/home/Home.jsx';
 
 const routes = [
     {
@@ -8,7 +8,7 @@ const routes = [
             {
                 path:'/',
                 exact:true,
-                component: TrackList
+                component: Home
             }
         ]
     }
