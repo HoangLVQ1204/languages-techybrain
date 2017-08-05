@@ -10,6 +10,7 @@ import './Home.css';
 import Speaking from './Speaking.jsx';
 import Learning from './Learning.jsx';
 import ListRoom from '../list-room/ListRoom.jsx';
+import RoomCard from '../list-room/RoomCard.jsx';
 
 class Home extends React.Component {
     
@@ -94,12 +95,22 @@ I bootstrapped this startup with a dream of educating MILLIONS people from aroun
                 </div>
                 <div className="container-room">
                     <div className="row">
-                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 m-b-15 ">
+                        {/*<div>*/}
+                        <RoomCard />
+                        <RoomCard />
+                        <RoomCard />
+                        <RoomCard />
+                        <RoomCard />
+                        <RoomCard />
+                        <RoomCard />
+                        <RoomCard />
+                        {/*</div>*/}
+                        {/*<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-b-15 ">*/}
+                            {/*<ListRoom  dataRoom={data.speakingRoom.room} titleRoom={data.speakingRoom.title}/>*/}
+                        {/*</div>*/}
+                        {/*<div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 m-b-15 ">
                             <ListRoom  dataRoom={data.speakingRoom.room} titleRoom={data.speakingRoom.title}/>
-                        </div>
-                        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 m-b-15 ">
-                            <ListRoom  dataRoom={data.speakingRoom.room} titleRoom={data.speakingRoom.title}/>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </div>

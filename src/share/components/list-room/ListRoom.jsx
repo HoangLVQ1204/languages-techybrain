@@ -11,6 +11,7 @@ import {grey400, cyan600, white} from 'material-ui/styles/colors';
 import './ListRoom.css';
 
 import Room from './Room.jsx';
+import RoomCard from './RoomCard.jsx';
 
 class ListRoom extends React.Component {
     render(){
@@ -37,17 +38,18 @@ class ListRoom extends React.Component {
         };
 
         return(
-            <Paper>
-                <List>
-                    <Subheader style={styles.subheader}>{titleRoom}</Subheader>
-                    {dataRoom.map(item =>
-                        <div>
-                            <Room roomData={item}/>
-                            <Divider inset={true} />
-                        </div>
-                    )}
-                </List>
-            </Paper>
+            <div>
+                {dataRoom.map(item =>
+                        <RoomCard /> 
+                )}
+            </div>
+            // <Paper>
+                
+            //     <List>
+            //         <Subheader style={styles.subheader}>{titleRoom}</Subheader>
+                    
+            //     </List>
+            // </Paper>
         )
     }
 }
