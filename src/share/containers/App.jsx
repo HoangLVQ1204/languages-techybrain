@@ -2,31 +2,27 @@ import React, { Component, PropTypes } from 'react';
 import { renderRoutes } from 'react-router-config';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import ThemeDefault from '../themes/ThemeDefault.jsx';
-// import 'font-awesome/css/font-awesome.css';
-// import 'flexboxgrid/css/flexboxgrid.css';
 
-import Header from '../components/header/Header.jsx'
+import Header from '../components/header/Header.jsx';
+import Footer from '../components/footer/Footer.jsx';
+
+import './App.css';
 
 class App extends Component {
     render() {
          const styles = {
-            header: {
-                paddingLeft: 0
-                //  paddingLeft: navDrawerOpen ? paddingLeftDrawerOpen : 0
-            },
             container: {
-                margin: '80px 20px 20px 15px',
-                // paddingLeft: navDrawerOpen && this.props.width !== SMALL ? paddingLeftDrawerOpen : 0
-                paddingLeft: 0
+                padding: "60px 20px 0px 20px"
             }
         };
         return (
             <MuiThemeProvider muiTheme={ThemeDefault}>
-                <div>
-                    <Header styles={styles.header} />
+                <div style={{ background: '#f9f9f9'}}>
+                    <Header />
                     <div style={styles.container}>
                     {renderRoutes(this.props.route.routes)}
                     </div>
+                    <Footer />
                 </div>
             </MuiThemeProvider>
         );

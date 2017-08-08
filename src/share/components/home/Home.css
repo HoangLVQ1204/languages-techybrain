@@ -12,6 +12,10 @@
 }
 
 .container-room {
-     margin: 80px 20px 20px 15px;
+     margin: 40px 20px 20px 15px;
      padding-left: 0;
+}
+
+.filter-room {
+    align-items: left
 }

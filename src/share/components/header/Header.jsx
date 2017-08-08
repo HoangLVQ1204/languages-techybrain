@@ -8,6 +8,11 @@ import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Menu from 'material-ui/svg-icons/navigation/menu';
 import ViewModule from 'material-ui/svg-icons/action/view-module';
 import {white} from 'material-ui/styles/colors';
+import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import RaisedButton from 'material-ui/RaisedButton';
+
+
+import './Header.css';
 
 
 class Header extends React.Component {
@@ -19,50 +24,35 @@ class Header extends React.Component {
       appBar: {
         position: 'fixed',
         top: 0,
+        left: 0,
         overflow: 'hidden',
-        maxHeight: 57
-      },
-      menuButton: {
-        marginLeft: 10
-      },
-      iconsRightContainer: {
-        marginLeft: 20
+        maxHeight: 57,
+        paddingTop: 5
       }
     };
+
+    
 
     return (
         <div>
             <AppBar
-              style={{...styles, ...style.appBar}}
-              iconElementLeft={
-                  <IconButton style={style.menuButton} onClick={handleChangeRequestNavDrawer}>
-                    <Menu color={white} />
-                  </IconButton>
-              }
+              style={style.appBar}
+              title="Talk2World"
+              iconStyleLeft={{
+                display: 'none'
+              }}
+              titleStyle={{
+                marginLeft: 10
+              }}
               iconElementRight={
-                <div style={style.iconsRightContainer}>
-                  <IconMenu color={white}
-                            iconButtonElement={
-                              <IconButton><ViewModule color={white}/></IconButton>
-                            }
-                            targetOrigin={{horizontal: 'right', vertical: 'top'}}
-                            anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-                  >
-                    <MenuItem key={1} primaryText="Application 1"/>
-                    <MenuItem key={2} primaryText="Application 2"/>
-                    <MenuItem key={3} primaryText="Application 3"/>
-                  </IconMenu>
-                  <IconMenu color={white}
-                            iconButtonElement={
-                              <IconButton><MoreVertIcon color={white}/></IconButton>
-                            }
-                            targetOrigin={{horizontal: 'right', vertical: 'top'}}
-                            anchorOrigin={{horizontal: 'right', vertical: 'top'}}
-                  >
-                    <MenuItem primaryText="Sign out" containerElement={<Link to="/login"/>}/>
-                  </IconMenu>
-                </div>
+                <div>
+                  <RaisedButton className="authen-button" label="Login" />
+                  <RaisedButton className="authen-button" primary={true} label="Sign up" />
+                </div>  
               }
+              iconStyleRight={{
+                marginRight: 10,
+              }}
             />
           </div>
       );
