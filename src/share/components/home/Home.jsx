@@ -11,10 +11,7 @@ import MenuItem from 'material-ui/MenuItem';
 
 
 import './Home.css';
-// import Speaking from './Speaking.jsx';
-// import Learning from './Learning.jsx';
-// import ListRoom from '../list-room/ListRoom.jsx';
-import RoomCard from '../list-room/RoomCard.jsx';
+import RoomCard from '../room-card/RoomCard.jsx';
 
 class Home extends React.Component {
 

@@ -1,0 +1,38 @@
+.room-container {
+    padding: 15px 15px
+}
+
+.button-join {
+
+}
+
+.list-avatar {
+    margin-top: 15px;
+}
+
+.list-avatar img {
+    margin-right: 10px;
+}
+
+.room-parts {
+    margin-bottom: 20px;
+}
+
+.room-contribution-learner {
+    padding: 20px 20px;
+}
+
+.rom-contribution-avatar {
+    padding: 13px 0px 0px 25px;
+}
+
+.rom-contribution-time {
+    font-style: italic;
+    font-size: 14px;
+    padding-top: 6px;
+}
+
+.rom-contribution-add-button {
+    text-align: center;
+    margin-top: 15px;
+}
